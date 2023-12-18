@@ -59,8 +59,8 @@ export default function Textbox(props) {
    const[text, setText] = useState('');
    // setText("welcome"); // correct way to change the text
     return (
-        <div className="container" style ={{color:props.mode===`light`?`black`:`white`}}>
-           <h1> {props.heading} </h1>
+        <div className="container mx-2" style ={{color:props.mode===`light`?`black`:`white`}}>
+          <div className="container mx-1"><h1> {props.heading} </h1> </div>
 
         <div className="container my-3">  
       <textarea name="mybox" id="fm" cols="100" rows="8" onChange={handleOnchange} style={{backgroundColor:props.mode===`light`?`white`:`#0c2a39`,color:props.mode===`light`?`black`:`white`,border:props.mode==='light'?'1px solid black':'1px solid white'}} value={text}></textarea>
@@ -84,7 +84,7 @@ export default function Textbox(props) {
         </div>
       </div>
       <h2 className='container mx-1'>Preview</h2>
-      <p className='container mx-1'>{text.length>0?text:"Nothing to preview"}</p>
+      <p className='container mx-2'>{text.length>0?text:"Nothing to preview"}</p>
 
 
       </div>
