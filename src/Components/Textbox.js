@@ -76,15 +76,14 @@ export default function Textbox(props) {
 
       <div className="container my-4 ">
         <h1>Your text summary : </h1>
-        <div className="container my-4 ">
-        <h3>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters</h3>
-        <h3>Time required to read the text
-          is {0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length} minutes
-        </h3>
+        <div className="container my-4">
+        <h4>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters</h4>
+        <h4>Time required to read the text is {0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length} minutes
+        </h4>
         </div>
       </div>
-      <h2 className='container mx-1'>Preview</h2>
-      <p className='container mx-2'>{text.length>0?text:"Nothing to preview"}</p>
+      <h1 className='container mx-1'>Preview</h1>
+      <p className='container mx-3'>{text.length>0?text:"Nothing to preview"}</p>
 
 
       </div>
