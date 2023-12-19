@@ -37,7 +37,7 @@ export default function About (props) {
       </h2>
       <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
         <div className="accordion-body" style={myStyle}>
-          Word counter is a free character counter tool that provides instant character count  and word count for a given text. Word counter reports the number of words and characters.thus it is suitable for character or word limit.
+          Word counter is a free character counter tool that provides instant character count  and word count for a given text. Word counter reports the number of words and characters, Thus it is suitable for character or word limit.
         </div>
       </div>
     </div>

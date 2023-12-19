@@ -36,8 +36,7 @@ export default function Textbox(props) {
               let newtext = document.getElementById("fm");
               newtext.select();
               navigator.clipboard.writeText(newtext.value);
-              document.getSelection().removeAllRanges();
-              props.showAlert("Copied to clipboard!", "success");
+              props.showAlert("Copied to clipboard", "success");
               }
 
               // Remove extra spaces button
@@ -59,31 +58,33 @@ export default function Textbox(props) {
    const[text, setText] = useState('');
    // setText("welcome"); // correct way to change the text
     return (
-        <div className="container mx-2" style ={{color:props.mode===`light`?`black`:`white`}}>
-          <div className="container mx-1"><h1> {props.heading} </h1> </div>
+        <div className="container" style ={{color:props.mode===`light`?`black`:`white`}}>
+           <h1> {props.heading} </h1>
 
         <div className="container my-3">  
-      <textarea name="mybox" id="fm" cols="100" rows="8" onChange={handleOnchange} style={{backgroundColor:props.mode===`light`?`white`:`#0c2a39`,color:props.mode===`light`?`black`:`white`,border:props.mode==='light'?'1px solid black':'1px solid white'}} value={text}></textarea>
+      <textarea name="mybox" id="fm" cols="100" rows="8" onChange={handleOnchange} style={{backgroundColor:props.mode===`light`?`white`:`grey`,color:props.mode===`light`?`black`:`white`}} value={text}></textarea>
        </div>
 
-       <button disabled = {text.length===0} className="btn btn-success mx-2 my-2 "  onClick={HandleUpClick} >Convert to Uppercase</button>
-       <button disabled = {text.length===0} className="btn btn-success mx-2 my-2"   onClick={HandleLoClick} >Convert to Lowercase</button>
-       <button disabled = {text.length===0} className="btn btn-success mx-2 my-2"   onClick={HandleSpaces} >Remove Extra Spaces</button>
-       <button disabled = {text.length===0} className="btn btn-success mx-2 my-2"   onClick={HandleCopyClick} >Copy Text</button>
-       <button disabled = {text.length===0} className="btn btn-success mx-2 my-2"   onClick={HandleClearClick} >Clear Text</button>
+       <button className="btn btn-success mx-3 my-2"  onClick={HandleUpClick} >Convert to Uppercase</button>
+       <button className="btn btn-success mx-2"   onClick={HandleLoClick} >Convert to Lowercase</button>
+       <button className="btn btn-success mx-2"   onClick={HandleSpaces} >Remove Extra Spaces</button>
+       <button className="btn btn-success mx-2"   onClick={HandleCopyClick} >Copy Text</button>
+       <button className="btn btn-success mx-2"   onClick={HandleClearClick} >Clear Text</button>
       
    <div/>
 
       <div className="container my-4 ">
         <h1>Your text summary : </h1>
-        <div className="container my-4">
-        <h4>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters</h4>
-        <h4>Time required to read the text is {0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length} minutes
-        </h4>
+        <div className="container my-4 ">
+        <h3>{text.split(/\s+/).length} words and {text.length} characters</h3>
+        <h3>Time required to read the text
+          is {0.008 * text.split(" ").length} minutes
+        </h3>
         </div>
       </div>
-      <h1 className='container mx-1'>Preview</h1>
-      <p className='container mx-3'>{text.length>0?text:"Nothing to preview"}</p>
+
+      <h1 className="container mx-1">Preview</h1>
+      <p className="container mx-2">{text.length>0?text:"Enter the text to preview"}</p>
 
 
       </div>
