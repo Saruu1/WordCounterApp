@@ -62,7 +62,7 @@ export default function Textbox(props) {
            <h1> {props.heading} </h1>
 
         <div className="container my-3">  
-      <textarea name="mybox" id="fm" cols="100" rows="8" onChange={handleOnchange} style={{backgroundColor:props.mode===`light`?`white`:`grey`,color:props.mode===`light`?`black`:`white`}} value={text}></textarea>
+      <textarea name="mybox" id="fm" cols="100" rows="8" onChange={handleOnchange} style={{backgroundColor:props.mode===`light`?`white`:`#0C1821`,color:props.mode===`light`?`black`:`white`}} value={text}></textarea>
        </div>
 
        <button className="btn btn-success mx-3 my-2"  onClick={HandleUpClick} >Convert to Uppercase</button>
