@@ -65,11 +65,11 @@ export default function Textbox(props) {
       <textarea name="mybox" id="fm" cols="100" rows="8" onChange={handleOnchange} style={{backgroundColor:props.mode===`light`?`white`:`#0C1821`,color:props.mode===`light`?`black`:`white`}} value={text}></textarea>
        </div>
 
-       <button className="btn btn-success mx-3 my-2"  onClick={HandleUpClick} >Convert to Uppercase</button>
-       <button className="btn btn-success mx-2"   onClick={HandleLoClick} >Convert to Lowercase</button>
-       <button className="btn btn-success mx-2"   onClick={HandleSpaces} >Remove Extra Spaces</button>
-       <button className="btn btn-success mx-2"   onClick={HandleCopyClick} >Copy Text</button>
-       <button className="btn btn-success mx-2"   onClick={HandleClearClick} >Clear Text</button>
+       <button className="btn btn-success mx-2 my-2"  onClick={HandleUpClick} >Convert to Uppercase</button>
+       <button className="btn btn-success mx-2 my-2"   onClick={HandleLoClick} >Convert to Lowercase</button>
+       <button className="btn btn-success mx-2 my-2"   onClick={HandleSpaces} >Remove Extra Spaces</button>
+       <button className="btn btn-success mx-2 my-2"   onClick={HandleCopyClick} >Copy Text</button>
+       <button className="btn btn-success mx-2 my-2"   onClick={HandleClearClick} >Clear Text</button>
       
    <div/>
 
